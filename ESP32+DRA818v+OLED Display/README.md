@@ -57,17 +57,7 @@ A sophisticated web-based controller for DRA818V ham radio transceiver modules u
 | -         | -           | VCC      | 3.3V      |
 | -         | -           | GND      | Ground    |
 
-## 🚀 Installation
 
-### 1. Library Dependencies
-Install these libraries via Arduino IDE Library Manager:
-```cpp
-WiFi.h
-WebServer.h
-ESPmDNS.h
-Wire.h
-Adafruit_GFX.h
-Adafruit_SSD1306.h
-Preferences.h
 
 vector
+
