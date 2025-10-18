@@ -1,0 +1,72 @@
+# HAM Radio Controller - ESP32 DRA818V Transceiver
+
+A sophisticated web-based controller for DRA818V ham radio transceiver modules using ESP32. Features a beautiful responsive web interface with real-time controls, channel management, and WiFi configuration.
+
+![HAM Radio Controller](https://img.shields.io/badge/Project-HAM%20Radio-blue)
+![ESP32](https://img.shields.io/badge/ESP32-Compatible-green)
+![DRA818V](https://img.shields.io/badge/DRA818V-Transceiver-orange)
+
+## ✨ Features
+
+### 🎛️ Core Functionality
+- **Frequency Control**: 134-174 MHz range with adjustable steps
+- **Real-time Audio Controls**: Instant volume and squelch adjustment
+- **CTCSS Support**: Programmable TX/RX tone squelch
+- **Channel Spacing**: 12.5KHz (Narrow) / 25KHz (Wide)
+- **Power Management**: 1W / 0.5W output power selection
+
+### 🌐 Web Interface
+- **Responsive Design**: Works perfectly on desktop and mobile
+- **Real-time Updates**: Live frequency display and status
+- **Channel Management**: Save, load, and delete frequency presets
+- **Beautiful UI**: Modern gradient design with smooth animations
+- **Touch-friendly**: Large buttons optimized for mobile use
+
+### 📡 Connectivity
+- **Dual WiFi Mode**: Access Point + Station mode
+- **Auto-reconnect**: Automatic WiFi reconnection
+- **Captive Portal**: Easy initial setup
+- **mDNS Support**: Access via `http://esp32.local`
+
+### 🖥️ OLED Display
+- **Live Status**: Frequency, TX/RX status, power level
+- **Network Info**: WiFi/AP mode and IP address
+- **Module Status**: DRA818V connectivity status
+- **Compact Layout**: Maximum information in minimal space
+
+## 🛠️ Hardware Requirements
+
+### Components
+- ESP32 Development Board
+- DRA818V VHF/UHF Transceiver Module
+- SSD1306 OLED Display (128x64)
+- Antenna (VHF 2m band recommended)
+- Power Supply (5V/2A recommended)
+- Breadboard/Jumper Wires
+
+### Pin Connections
+| ESP32 Pin | DRA818V Pin | OLED Pin | Function |
+|-----------|-------------|----------|----------|
+| GPIO16    | RX          | -        | DRA818V RX |
+| GPIO17    | TX          | -        | DRA818V TX |
+| GPIO18    | PTT         | -        | Push-to-Talk |
+| GPIO23    | POWER       | -        | Module Power |
+| GPIO13    | PWR_SEL     | -        | Power Level (1W/0.5W) |
+| GPIO21    | -           | SDA      | OLED Data |
+| GPIO22    | -           | SCL      | OLED Clock |
+| -         | -           | VCC      | 3.3V      |
+| -         | -           | GND      | Ground    |
+
+## 🚀 Installation
+
+### 1. Library Dependencies
+Install these libraries via Arduino IDE Library Manager:
+```cpp
+WiFi.h
+WebServer.h
+ESPmDNS.h
+Wire.h
+Adafruit_GFX.h
+Adafruit_SSD1306.h
+Preferences.h
+vector
